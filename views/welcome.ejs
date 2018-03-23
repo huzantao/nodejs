@@ -1,0 +1,63 @@
+<%- include header.ejs%>
+<%- include userComm.ejs%>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>名称</th>
+                    <th>职业</th>
+                </tr>
+                </thead>
+                <tbody id="tbodyInfo">
+                <tr>
+                    <td>1</td>
+                    <td>hu</td>
+                    <td>xx</td>
+                    <td>
+                        <button type="button" class="btn btn-info" value="1">修改</button>
+                        <button type="button" class="btn btn-danger" value="1">删除</button>
+                        <button type="button" class="btn btn-link">更多信息</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>hu</td>
+                    <td>xx</td>
+                    <td>
+                        <button type="button" class="btn btn-info" value="1">修改</button>
+                        <button type="button" class="btn btn-danger" value="1">删除</button>
+                        <button type="button" class="btn btn-link">更多信息</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>hu</td>
+                    <td>xx</td>
+                    <td>
+                        <button type="button" class="btn btn-info" value="1">修改</button>
+                        <button type="button" class="btn btn-danger" value="1">删除</button>
+                        <button type="button" class="btn btn-link">更多信息</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+<%- include userCommEnd.ejs%>
+<script type="text/javascript" src="../javascripts/userList.js"></script>
+<script>
+    window.onload = function () {
+        usList.getTable.show();
+        $(".btn-info").click(function (){
+            var id = $(this).attr('id');
+           // info = usList.getTable.editInfo(id);
+            window.location.href="/users/edit?id="+id;
+        })
+        $(".btn-danger").click(function (){
+            var id = $(this).val();
+        })
+        $(".btn-link").click(function (){
+            var id = $(this).attr('id');
+            usList.getTable.moreInfo(id);
+        })
+    }
+</script>
+<%- include tail.ejs%>

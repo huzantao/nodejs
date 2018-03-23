@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2">
+            <ul class="nav nav-tabs nav-stacked">
+                <li><a href='#'>欢迎***用户</a></li>
+                <li><a href='#'>Another Link 1</a></li>
+                <li><a href='#'>Another Link 2</a></li>
+                <li><a href='#'>Another Link 3</a></li>
+            </ul>
+        </div>
+        <div id="body" class="span10">
+            <ul class="nav nav-tabs">
+                <li class=>
+                    <a href="#">首页</a>
+                </li>
+                <li><a href="/add">新增</a></li>
+                <li class="active"><a href="/edit" >修改</a></li>
+            </ul>
+            <script>
+                window.onload = function () {
+                    $('a').click(function () {
+                        alert("cc"+$(this).parent().createAttribute('class'));
+                        $(this).parent().setAttribute('class','active');
+                    })
+                }
+            </script>
